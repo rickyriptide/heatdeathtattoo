@@ -1,0 +1,115 @@
+.skip a{
+    position: absolute;
+    top: -65px;
+    z-index: 1000;
+    color: black;
+}
+.skip a:focus{
+    top: 0px;
+}
+nav li{
+    display: inline;
+    padding-right: 20px;
+    margin: 10px 10px;
+}
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav{
+    background-color: lightgrey;
+    padding: 20px;
+}
+body{
+    font-family: Baskerville, "Times New Roman";
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+.banner{
+    grid-column: 1/-1;
+    margin: 35px 0px;
+}
+.gallery-title{
+    grid-column: 1/-1;
+    margin: 35px 0px;
+    text-align: center;
+    font-size: 2em;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+}
+section{
+    grid-column: 1/-1;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    justify-items: center;
+}
+.gallery-item img:hover{
+    box-shadow: 2px 2px 20px;
+}
+.gallery-item img{
+    max-height: 400px;
+    width: 100%;
+}
+.gallery div:last-child{
+    grid-column: 1/-1;
+}
+.gallery div:last-child img{
+    width: auto;
+}
+
+.left-vine{
+    display: none;
+    grid-column: 1/2;
+    grid-row: 2/5;
+}
+.left-vine img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.right-vine{
+    display: none;
+    grid-column: 5/6;
+    grid-row: 2/5;
+}
+.right-vine img{
+    rotate: 180deg;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+@media screen and (min-width: 768px){
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    section{
+        grid-column: 2/5;
+    }
+    .left-vine{
+        display: block;
+    }
+    .right-vine{
+        display: block;
+    }
+}
