@@ -60,14 +60,16 @@ section{
     box-shadow: 2px 2px 20px;
 }
 .gallery-item img{
-    max-height: 400px;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .gallery div:last-child{
     grid-column: 1/-1;
 }
 .gallery div:last-child img{
     width: auto;
+    height: 300px;
 }
 
 .left-vine{
